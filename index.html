@@ -16,7 +16,7 @@
     <title>AtomicG</title>
 </head>
 
-<body>
+<body class="scrollspy">
     <header class="main-header ">
         <nav class="white">
             <div class="container">
@@ -26,15 +26,17 @@
                         <i class="fa fa-bars"></i>
                     </a>
                     <ul class="right hide-on-med-and-dow">
-                        <li><a href="#" class="blue-text">What is this?</a></li>
-                        <li><a href="#" class="blue-text">How it Works?</a></li>
-                        <li><a href="#" class="blue-text">Generators</a></li>
+                        <li><a href="#whatisit" class="blue-text">What is this?</a></li>
+                        <li><a href="#howitworks" class="blue-text">How it Works?</a></li>
+                        <li><a href="#generators" class="blue-text">Generators</a></li>
+                        <li><a href="#feedback" class="blue-text">Feedback</a></li>
                     </ul>
 
                     <ul class="side-nav" id="mobile-nav">
-                        <li><a href="#" class="blue-text">What is this?</a></li>
-                        <li><a href="#" class="blue-text">How it Works?</a></li>
-                        <li><a href="#" class="blue-text">Generators</a></li>
+                        <li><a href="#whatisit" class="blue-text">What is this?</a></li>
+                        <li><a href="#howitworks" class="blue-text">How it Works?</a></li>
+                        <li><a href="#generators" class="blue-text">Generators</a></li>
+                        <li><a href="#feedback" class="blue-text">Feedback</a></li>
                     </ul>
                 </div>
             </div>
@@ -55,7 +57,7 @@
         </div>
     </header>
 
-    <section class="section section-whatisit grey lighten-4">
+    <section id="whatisit" class="section section-whatisit grey lighten-4 scrollspy">
         <div class="container">
             <div class="row">
                 <div class="col s12 m8">
@@ -72,7 +74,7 @@
         </div>
     </section>
 
-    <section class="section section-howitworks grey darken-4 white-text">
+    <section id="howitworks" class="section section-howitworks grey darken-4 white-text scrollspy">
         <div class="container">
             <div class="row">
                 <div class="col s12 m4">
@@ -86,7 +88,7 @@
         </div>
     </section>
 
-    <section class="section section-generators center">
+    <section id="generators" class="section section-generators center scrollspy">
         <div class="container">
             <div class="row">
                 <div class="col s12 m4">
@@ -116,7 +118,7 @@
         </div>
     </section>
 
-    <section class="section section-feedback grey darken-4 white-text">
+    <section id="feedback" class="section section-feedback grey darken-4 white-text scrollspy">
         <div class="container">
             <div class="row">
                 <div class="col s12 m8">
@@ -132,7 +134,7 @@
         </div>
     </section>
 
-    <footer class="main-footer section section-footer grey lighten-4 center">
+    <footer id="footer" class="main-footer section section-footer grey lighten-4 center scrollspy">
         <div class="container">
             <div class="footer-copyright text-center py-3"> &copy; 2019, Made with <fa-icon class="ng-fa-icon" style="color: #a52a2a;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg></fa-icon> in Miami </div>
         </div>
@@ -145,7 +147,7 @@
     <script>
         $(document).ready(function () {
             // Custom JS & jQuery here
-
+            $('.scrollspy').scrollSpy();
         });
     </script>
 </body>
