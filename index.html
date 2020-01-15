@@ -8,24 +8,146 @@
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/asciinema-player.css" />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Custom Materialize Theme</title>
+    <title>AtomicG</title>
 </head>
 
 <body>
+    <header class="main-header ">
+        <nav class="white">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="#" class="brand-logo"><img src="img/logo.svg"></a>
+                    <a href="#" data-activates="mobile-nav" class="button-collapse">
+                        <i class="fa fa-bars"></i>
+                    </a>
+                    <ul class="right hide-on-med-and-dow">
+                        <li><a href="#" class="blue-text">What is this?</a></li>
+                        <li><a href="#" class="blue-text">How it Works?</a></li>
+                        <li><a href="#" class="blue-text">Generators</a></li>
+                    </ul>
 
+                    <ul class="side-nav" id="mobile-nav">
+                        <li><a href="#" class="blue-text">What is this?</a></li>
+                        <li><a href="#" class="blue-text">How it Works?</a></li>
+                        <li><a href="#" class="blue-text">Generators</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+       <!-- Showcase -->
+        <div class="showcase container">
+            <div class="row">
+                <div class="col s12 m6 center">
+                    <h4>Generate repetitive source code files for your project from then command line.</h4>
+                    <br>
+                    <br>
+                    <a href="https://www.npmjs.com/package/@atomicg/atomicg" class="btn btn btn-large blue white-text">Begin</a>
+                </div>
+                <div class="col s12 m6">
+                    <asciinema-player src="img/atomicg.cast" rows="20"></asciinema-player>
+                </div>
+            </div>
+        </div>
+    </header>
 
-<!--Import jQuery before materialize.js-->
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="js/materialize.min.js"></script>
-<script>
-    $(document).ready(function () {
-        // Custom JS & jQuery here
+    <section class="section section-whatisit grey lighten-4">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8">
+                    <h3>What is this?</h3>
+                    <p>This project provides you with a cli tool that you can use to generate source code files in your
+                        project, You will have a file named atomicg.yml in the root of your project, in this file you can
+                        put the entities you want to generate for your project, you also can specify what generators must
+                        be use. You can run the tool from the command line to generate the source code files that match
+                        your configuration.
+                        You can repeat this process indefinitely to always have a functional well formatted and well written
+                        model of data for your project.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    });
-</script>
+    <section class="section section-howitworks grey darken-4 white-text">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+
+                </div>
+                <div class="col s12 m8 right-align">
+                    <h3>How it Works?</h3>
+                    <p>The tool works with our remote server to create the source code files for your project, First, the cli client tool collects the information from your local file system, namedly it will read and upload your model and send it to the server. Then the server will process your model and generated the relevant source code files. Finally the server will send the generated source code files to the cli tool so it can put the files in your projects in their respective locations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-generators center">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="fa fa-database fa-3x blue-text"></i>
+                        <h5 class="grey-text text-darken-2">MySQL DDL script</h5>
+                        <p>Generates the necesary DDL script for MySQL to create and upgrade the database of your project.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="fa fa-table fa-3x blue-text"></i>
+                        <h5 class="grey-text text-darken-2">Sequelize models</h5>
+                        <p>Generates the sequelize models for your entities so they can be use in your business logic.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m4">
+                    <div class="card-panel">
+                        <i class="fa fa-server fa-3x blue-text"></i>
+                        <h5 class="grey-text text-darken-2">ExpressJS CRUDs</h5>
+                        <p>Creates a CRUD router for expressjs for each entity so it can be use as part of the api of your backend.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-feedback grey darken-4 white-text">
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8">
+                    <h3>Feedback</h3>
+                    <p>Your feedback it's really important to us, if there is a feature you want implemented or if you
+                        discover an unresolved bug in the generated source code we would like to hear from you, please
+                        consider writing an email to <a href="mailto:info@atomicg.dev">info@atomicg.dev</a></p>
+                </div>
+            </div>
+            <div class="col s12 m4">
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer section section-footer grey lighten-4 center">
+        <div class="container">
+            <div class="footer-copyright text-center py-3"> &copy; 2019, Made with <fa-icon class="ng-fa-icon" style="color: #a52a2a;"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="heart" class="svg-inline--fa fa-heart fa-w-16" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg></fa-icon> in Miami </div>
+        </div>
+    </footer>
+
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/asciinema-player.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Custom JS & jQuery here
+
+        });
+    </script>
 </body>
 
 </html>
